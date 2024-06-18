@@ -1,4 +1,4 @@
-all : heatshrink_test
+all : heatshrink_test example
 
 CFLAGS:=-O2 -g -I.
 
@@ -29,7 +29,10 @@ test : heatshrink/heatshrink heatshrink_test heatshrink_test_static heatshrink_t
 	./heatshrink_test_static2 < gcc.hs > gcc2.check
 	diff gcc2.check /usr/bin/gcc
 	./heatshrink_test_size
-	size heatshrink_test_size
+	size -A heatshrink_test_size | grep "bss\|text\|data"
+
+example : example.c
+	gcc -o $@ $^ $(CFLAGS)
 
 clean :
 	rm -rf heatshrink_test gcc.hs gcc.check heatshrink_test_static heatshrink_test_static2 heatshrink_test_size gcc2.check
