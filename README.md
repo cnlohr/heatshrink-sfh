@@ -89,3 +89,6 @@ compression, but does not leverage huffman tables which are common in more sophi
 compression algorithms, so compression is not as good as deflate, but it's still pretty
 impressive what a simple algorithm can use.
 
+## License
+
+This project is officially licensed under the ISC License, which is theoreteically compatible with the BSD 3-clause and MIT license.  But, spcficailly this header-only library may be relicensed under the MIT, NewBSD, 3-Clause or may be treated as public domain as desired.
