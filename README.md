@@ -1,8 +1,8 @@
 # heatshrink-sfh
 
-Single-file-header version of heatshrink decompression algorithm, rewritten for embedded
-and application-specific environments, able to be dynamically or statically configured for
-streaming or in-place decompression.
+Single-file-header version of [heatshrink](https://github.com/atomicobject/heatshrink/)
+decompression algorithm, rewritten for embedded and application-specific environments, able
+to be dynamically or statically configured for streaming or in-place decompression.
 
 Designed to be extremely small as well.  Typically within about 500 bytes of code. In fact
 a complete demo in tests/heatshrink_test_size.c compiles to 670 bytes of code, has no
