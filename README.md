@@ -74,6 +74,7 @@ int main()
 ## Quick comparison
 
 | File | Initial Size | gzip -9 | heatshrink -w 8 -l 4 |
+| --- | --- | --- | --- |
 | x86_64 gcc 11 | 928584 | 337702 (36%) | 478246 (51%) |
 | BadApple-mod.mid | 13040 | 1009 (7.7%) | 2394 (18%) |
 | spacestations.txt (tle) | 5378 | 1797 (33%) | 2800 (52%) |
