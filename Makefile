@@ -2,16 +2,16 @@ all : heatshrink_test example
 
 CFLAGS:=-O2 -g -I.
 
-heatshrink_test : tests/heatshrink_test.c
+heatshrink_test : examples/heatshrink_test.c
 	gcc -o $@ $^ $(CFLAGS)
 
-heatshrink_test_static : tests/heatshrink_test_static.c
+heatshrink_test_static : examples/heatshrink_test_static.c
 	gcc -o $@ $^ $(CFLAGS)
 
-heatshrink_test_static2 : tests/heatshrink_test_static2.c
+heatshrink_test_static2 : examples/heatshrink_test_static2.c
 	gcc -o $@ $^ $(CFLAGS)
 
-heatshrink_test_size : tests/heatshrink_test_size.c
+heatshrink_test_size : examples/heatshrink_test_size.c
 	gcc -o $@ $^ -I. -Os -nostdlib -Wl,-e"start" -ffunction-sections -fdata-sections -flto -Wl,--gc-sections
 
 heatshrink/heatshrink : heatshrink/heatshrink.c heatshrink/heatshrink_encoder.c heatshrink/heatshrink_decoder.c
